@@ -11,6 +11,16 @@ A content-based music recommendation app that finds similar tracks from audio fe
 - Includes a transparent similarity score and track metadata.
 - Accepts a replacement CSV catalogue for experimentation with other datasets.
 
+## Architecture
+
+```mermaid
+flowchart LR
+    A[Track catalogue CSV] --> B[Validation and numeric cleanup]
+    B --> C[Audio-feature standardization]
+    C --> D[Cosine-similarity ranking]
+    D --> E[Streamlit recommendations UI]
+```
+
 ## Quick start
 
 ```bash
